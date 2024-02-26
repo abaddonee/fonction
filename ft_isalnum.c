@@ -1,6 +1,4 @@
-#include <ctype.h>
-#include <stdio.h>
-
+#include "libft.h"
 int ft_isalnum(int c)
 {
 		char ch = c;
@@ -12,22 +10,4 @@ int ft_isalnum(int c)
 }
 
 
-int main() {
-    char test_char = '5';
 
-    printf("Using isalnum:\n");
-    if (isalnum(test_char)) {
-        printf("%c is alphanumeric.\n", test_char);
-    } else {
-        printf("%c is not alphanumeric.\n", test_char);
-    }
-
-    printf("\nUsing ft_isalnum:\n");
-    if (ft_isalnum(test_char)) {
-        printf("%c is alphanumeric.\n", test_char);
-    } else {
-        printf("%c is not alphanumeric.\n", test_char);
-    }
-
-    return 0;
-}

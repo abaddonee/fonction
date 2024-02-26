@@ -1,16 +1,4 @@
-#include <string.h>
-#include <stdio.h>
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while(s[i] != '\0')
-	{
-		i++;
-	}
-	return i;
-}
+#include "libft.h" 
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -36,25 +24,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 
-int main() {
-    char dest[20] = "Hello, ";
-    char src[] = "World!";
-    size_t dstsize = sizeof(dest);
 
-    // Using strlcat
-    printf("Using strlcat:\n");
-    printf("Before concatenation: dest = %s, src = %s\n", dest, src);
-    size_t result_strlcat = strlcat(dest, src, dstsize);
-    printf("After concatenation: dest = %s, src = %s, result = %zu\n", dest, src, result_strlcat);
-
-    // Reset dest
-    strcpy(dest, "Hello, ");
-
-    // Using ft_strlcat
-    printf("\nUsing ft_strlcat:\n");
-    printf("Before concatenation: dest = %s, src = %s\n", dest, src);
-    size_t result_ft_strlcat = ft_strlcat(dest, src, dstsize);
-    printf("After concatenation: dest = %s, src = %s, result = %zu\n", dest, src, result_ft_strlcat);
-
-    return 0;
-}

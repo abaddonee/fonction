@@ -1,7 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
-
-
+#include "libft.h" 
 void ft_putnbr(int n, int fd)
 {		
 	char result = 0;
@@ -23,8 +20,4 @@ void ft_putnbr(int n, int fd)
 	write(fd, &result, 1);
  }
 
-int main() {
-    int num = -12345;
-    ft_putnbr(num, 1); // Assuming you want to print to stdout (file descriptor 1)
-    return 0;
-}
+

@@ -1,19 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t i;
-
-	i = 0;
-	while(s[i] != '\0')
-	{
-		i++;
-	}
-	return i;
-}
+#include "libft.h" 
 
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -39,40 +24,4 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return(result);
 }
 
-char my_function(unsigned int index, char c)
-{
-    // Exemple simple : Convertir chaque caractère en majuscule
-    if (c >= 'a' && c <= 'z')
-    {
-        return c - 32; // Convertir en majuscule
-    }
-    else
-    {
-        return c; // Ne rien changer pour les autres caractères
-    }
-}
-
-int main()
-{
-    // Chaîne de caractères de test
-    const char *input = "Hello, World!";
-
-    // Appel de la fonction ft_strmapi
-    char *result = ft_strmapi(input, &my_function);
-
-    if (result != NULL)
-    {
-        // Affichage du résultat
-        printf("Résultat : %s\n", result);
-
-        // Libération de la mémoire allouée dynamiquement
-        free(result);
-    }
-    else
-    {
-        printf("Allocation mémoire échouée.\n");
-    }
-
-    return 0;
-}
 

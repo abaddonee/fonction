@@ -1,6 +1,4 @@
-#include <string.h>
-#include <stdio.h>
-
+#include "libft.h" 
 int ft_strmncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i = 0;
@@ -11,16 +9,4 @@ int ft_strmncmp(const char *s1, const char *s2, size_t n)
 	return(s1[i] - s2[i]);
 }
 
-int main() 
-{
-    const char *str1 = "hello";
-    const char *str2 = "hello";
 
-    printf("Using strncmp:\n");
-    printf("Comparison result: %d\n", strncmp(str1, str2, 6)); // Compare the first 5 characters
-
-    printf("\nUsing ft_strmncmp:\n");
-    printf("Comparison result: %d\n", ft_strmncmp(str1, str2, 6)); // Compare the first 5 characters
-
-    return 0;
-}

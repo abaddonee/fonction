@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -27,15 +26,4 @@ int ft_atoi(const char *str)
 	return(n);
 }
 	
-int main() 
-{
-    const char *str = " 21 4";
 
-    printf("Using atoi:\n");
-    printf("Result: %d\n", atoi(str));
-
-    printf("\nUsing ft_atoi:\n");
-    printf("Result: %d\n", ft_atoi(str));
-
-    return 0;
-}

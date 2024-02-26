@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h" 
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -23,22 +21,4 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 
-int main() 
-{
-    const char *s = "Hello, World!";
-    unsigned int start = 7;
-    size_t len = 5;
 
-    char *sub = ft_substr(s, start, len);
-    if (sub == NULL) {
-        printf("Memory allocation failed.\n");
-        return 1;
-    }
-
-    printf("Substring: %s\n", sub);
-
-    // Remember to free the allocated memory
-    free(sub);
-
-    return 0;
-}

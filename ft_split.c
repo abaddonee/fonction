@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-
-void ft_free_split(char **split)
+#include "libft.h" 
+static void ft_free_split(char **split)
 {
     if (split)
     {
@@ -92,25 +88,4 @@ char	**ft_split(char const *s, char c)
 
 
 
-int main() {
-    char const *s = "Le;ciel;est;bleu";
-    char c = ';';
 
-    // Appel de ft_split
-    char **split = ft_split(s, c);
-    if (!split) {
-        printf("Erreur: la fonction ft_split a échoué.\n");
-        return 1;
-    }
-
-    // Affichage des mots séparés
-    printf("Mots séparés :\n");
-    for (int i = 0; split[i] != NULL; i++) {
-        printf("%s\n", split[i]);
-    }
-
-    // Libération de la mémoire allouée
-    ft_free_split(split);
-
-    return 0;
-}

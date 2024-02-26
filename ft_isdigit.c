@@ -1,6 +1,4 @@
-#include <ctype.h>
-#include <stdio.h>
-
+#include "libft.h"
 int ft_isdigit(int c)
 {
 		char ch = c;
@@ -12,22 +10,4 @@ int ft_isdigit(int c)
 }
 
 
-int main() {
-    char test_char = '5';
 
-    printf("Using isdigit:\n");
-    if (isdigit(test_char)) {
-        printf("%c is a digit.\n", test_char);
-    } else {
-        printf("%c is not a digit.\n", test_char);
-    }
-
-    printf("\nUsing ft_isdigit:\n");
-    if (ft_isdigit(test_char)) {
-        printf("%c is a digit.\n", test_char);
-    } else {
-        printf("%c is not a digit.\n", test_char);
-    }
-
-    return 0;
-}

@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
+#include "libft.h"
 
 static int ft_nlen(int n)
 {
@@ -58,21 +55,4 @@ char *ft_itoa(int n)
 
 
 
-int main() {
-    int number = -12345;
-    char *str_number = ft_itoa(number);
 
-    if (str_number == NULL) {
-        printf("Erreur lors de l'allocation de mémoire.\n");
-        return 1;
-    }
-
-    printf("Entier : %d\n", number);
-    printf("Chaîne de caractères : %s\n", str_number);
-
-    // Libération de la mémoire allouée dynamiquement
-    free(str_number);
-
-    return 0;
-}
-		

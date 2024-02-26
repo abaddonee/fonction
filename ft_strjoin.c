@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include "libft.h"
 char *ft_strjoin(char const *s1, char const *s2)
 {
 		int i = 0;
@@ -41,21 +38,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 }
 
 
-int main() {
-    const char *s1 = "Hello, ";
-    const char *s2 = "World!";
-    char *joined_str;
 
-    joined_str = ft_strjoin(s1, s2);
-    if (joined_str == NULL) {
-        printf("Memory allocation failed.\n");
-        return 1;
-    }
-
-    printf("Joined string: %s\n", joined_str);
-
-    // Remember to free the memory allocated for the joined string
-    free(joined_str);
-
-    return 0;
-}

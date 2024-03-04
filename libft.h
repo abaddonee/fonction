@@ -6,7 +6,7 @@
 /*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:41:39 by likiffel          #+#    #+#             */
-/*   Updated: 2024/03/03 22:46:43 by likiffel         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:28:56 by likiffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <limits.h>
+# include <stdint.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

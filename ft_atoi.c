@@ -1,29 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/02 03:02:32 by likiffel          #+#    #+#             */
+/*   Updated: 2024/03/03 20:14:26 by likiffel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int signe = 0;
-	int i = 0;
-	int n = 0;
-	while(str[i] == ' ' || (str[i] > 9 && str[i] < 13))
-	{
-		i++;
-	}
-	if(str[i] == '-')
-	{
-		signe = 1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9' ) 
-	{
-		n = n * 10 + str[i] - '0'; 
-		i++; 
-	}
-	if(signe == 1)
-	{
-			return(-n);
-	}
-	return(n);
-}
-	
+	int	nbr;
+	int	signe;
 
+	signe = 1;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '-')
+	{
+		signe = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	nbr = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		nbr = nbr * 10 + *str - '0';
+		str++;
+	}
+	return (nbr * signe);
+}

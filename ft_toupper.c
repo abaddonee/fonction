@@ -1,13 +1,24 @@
-#include "libft.h" 
-int ft_toupper(int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/03 22:40:17 by likiffel          #+#    #+#             */
+/*   Updated: 2024/03/03 22:41:00 by likiffel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-	unsigned char ch = c;
-	if(ch >= 'a' && ch <= 'z')
+	unsigned char	ch;
+
+	ch = c;
+	if (ch >= 'a' && ch <= 'z')
 	{
-			ch -= 32;
+		ch -= 32;
 	}
-	return(ch);
+	return (ch);
 }
-
-
-

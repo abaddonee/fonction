@@ -6,11 +6,11 @@
 /*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:09:44 by likiffel          #+#    #+#             */
-/*   Updated: 2024/02/19 17:13:43 by likiffel         ###   ########.fr       */
+/*   Updated: 2024/03/03 21:25:50 by likiffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include "libft.h" 
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
@@ -21,7 +21,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write (fd, &s[i], 1);
 		i++;
 	}
-	write(fd, "\n", 1);
-}	
-
-
+	write (fd, "\n", 1);
+}

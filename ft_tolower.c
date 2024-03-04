@@ -1,13 +1,24 @@
-#include "libft.h" 
-int ft_tolower(int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/03 22:38:57 by likiffel          #+#    #+#             */
+/*   Updated: 2024/03/03 22:40:03 by likiffel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-	unsigned char ch = c;
-	if(ch >= 'A' && ch <= 'Z')
+	unsigned char	ch;
+
+	ch = c;
+	if (ch >= 'A' && ch <= 'Z')
 	{
-			ch += 32;
+		ch += 32;
 	}
-	return(ch);
+	return (ch);
 }
-
-
-

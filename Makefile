@@ -6,7 +6,7 @@
 #    By: likiffel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/28 15:24:53 by likiffel          #+#    #+#              #
-#    Updated: 2024/02/28 15:27:05 by likiffel         ###   ########.fr        #
+#    Updated: 2024/03/05 21:19:04 by likiffel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
-all:			$(NAME) clean
+all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)

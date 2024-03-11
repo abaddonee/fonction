@@ -6,19 +6,16 @@
 /*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 22:38:57 by likiffel          #+#    #+#             */
-/*   Updated: 2024/03/03 22:40:03 by likiffel         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:05:49 by likiffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_tolower(int c)
 {
-	unsigned char	ch;
-
-	ch = c;
-	if (ch >= 'A' && ch <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		ch += 32;
+		c += 32;
 	}
-	return (ch);
+	return (c);
 }

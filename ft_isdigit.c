@@ -6,17 +6,14 @@
 /*   By: likiffel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 20:52:06 by likiffel          #+#    #+#             */
-/*   Updated: 2024/03/03 20:53:11 by likiffel         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:04:06 by likiffel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_isdigit(int c)
 {
-	char	ch;
-
-	ch = c;
-	if (ch >= '0' && ch <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
